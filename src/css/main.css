@@ -23,12 +23,8 @@ body {
 
 .change {
   font-family: 'Nunito Sans', sans-serif;
-  color: white;
-  width: 75px;
-  height: 30px;
-  border-radius: 5px;
-  background-color: hsl(209, 23%, 22%);
   cursor: pointer;
+  width: 30px;
 }
 
 .title {
