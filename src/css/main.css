@@ -4,15 +4,22 @@ body {
   font-weight: 800;
 }
 
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
 .nav--bar {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 100%;
+  width: 100vw;
   height: 80px;
-  position: absolute;
-  top: 0;
-  left: 0;
   box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -38,8 +45,8 @@ body {
   padding: 16px;
 }
 
-.main{
+
+.select {
   display: flex;
-  flex-direction: column;
-  width: 100%;
+  flex-direction: row;
 }
