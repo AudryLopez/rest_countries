@@ -8,19 +8,21 @@ body {
   display: flex;
   flex-direction: column;
   width: 100vw;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  position: absolute;
+  position: relative;
+  background-color: hsl(0, 0%, 98%);
 }
 
 .nav--bar {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 80px;
   box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  z-index: 1;
 }
 
 .nav--bar .right {
@@ -45,8 +47,21 @@ body {
   padding: 16px;
 }
 
-
-.select {
+.select-container {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  margin: 80px 0 0 0;
+}
+
+.text-input {
+  width: 200px;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: hsl(0, 0%, 98%);
+  box-shadow:4px 4px 10px rgba(0,0,0,0.06);
+}
+
+.select {
+  
 }
