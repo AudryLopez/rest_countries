@@ -10,3 +10,20 @@ function change(){
   input.style.backgroundColor = "hsl(209, 23%, 22%)";
   document.body.style.backgroundColor = "hsl(207, 26%, 17%)";
 }
+
+function render(data){
+  const { img, country } = data;
+  const render = `
+    <div class="card">
+      <img src="${img}" alt="${country}" style="width:100%">
+      <div class="container">
+        <h4><b>${country}</b></h4>
+        <p>Architect & Engineer</p>
+      </div>
+    </div>`;
+}
+
+const getdata = async (url)=>{
+  const response = await fetch(url)
+  return render(response);
+}
