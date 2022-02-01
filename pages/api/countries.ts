@@ -1,6 +1,4 @@
 const country = async ( country: string ) => {
-  const Name = process.env.API_COUNTRIES_NAME;
-	console.log(Name);
   const response = await fetch(
     `https://restcountries.com/v3.1/name/${country}`
   );
