@@ -3,6 +3,15 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Header from '../components/header/header'
+import country from './api/countries'
+
+
+const data = async () =>{
+  const response = await country('peru')
+  console.log(response)
+}
+
+data();
 
 const Home: NextPage = () => {
   return (
