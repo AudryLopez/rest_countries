@@ -1,4 +1,4 @@
-const country = async ( country: string ) => {
+export const country = async ( country: string ) => {
   const response = await fetch(
     `https://restcountries.com/v3.1/name/${country}`
   );
@@ -6,11 +6,15 @@ const country = async ( country: string ) => {
   return response.json()
 }
 
-const countries = async (countries: string) => {
+export const alphaContry = async (countries: string) => {
   const { API_COUNTRIES_ALPHA } = process.env;
   const response = await fetch(`${API_COUNTRIES_ALPHA}${countries}`);
   if (!response) throw Error(`this ${countries} is not foound`);
   return response.json();
 };
 
-export default country;
+export const contries = async () => {
+  const response = await fetch(`https://restcountries.com/v3.1/all`);
+  if (!response) throw Error(`Not Found`);
+  return response.json();
+};
