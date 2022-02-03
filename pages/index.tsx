@@ -6,7 +6,6 @@ import Header from '../components/header/header'
 
 const Home: NextPage = () => {
 
-
   return (
     <div className={styles.container}>
       <Head>

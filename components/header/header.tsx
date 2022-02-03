@@ -1,4 +1,5 @@
 import styles from './header.module.css'
+import Image from 'next/image'
 
 export default function Header(){
     return (
@@ -7,7 +8,11 @@ export default function Header(){
           <h1 className={styles.title}>Where in the word</h1>
         </div>
         <div className={styles.right}>
-          <img src="img/moon-solid.svg" className={styles.btnchange} alt="color theme button"/>
+          <Image
+            src="../img/moon-solid.svg"
+            className={styles.btnchange}
+            alt="color theme button"
+          />
         </div>
       </header>
     );

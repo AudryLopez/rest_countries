@@ -1,19 +1,14 @@
-import { useState } from "react";
-import country from "../../pages/api/countries";
+import Image from "next/image"
+import styles from "./country.module.css"
 import Country from "../types/country";
 
-export default function Countries(props: string) {
-  const [name, setcountry] = useState<Country>();
-
-	const countryhandler = async (name: string)=>{
-    const response = await country(name);
-    const contries = response.map((data: any) => {
-      setcountry(data)
-    });
-    return contries;
-	}
-
-	return(
-		<h1>Hola</h1>
-	)
+export default function Countries(props: Country) {
+  return (
+    <section className={styles.main} >
+      <Image src={props.flags} alt={`flag of ${props.nativeName}`} />
+      <div className={styles.country} >
+        <h1 className={styles.title} >{props.nativeName}</h1>
+      </div>
+    </section>
+  );
 }
