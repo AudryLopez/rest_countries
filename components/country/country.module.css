@@ -1,0 +1,31 @@
+.main {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+	height: 45%;
+}
+
+.country {
+	display: flex;
+	flex-direction: column;
+}
+
+.title {
+	color: black;
+	font-weight: 800;
+}
+
+.container {
+	display: flex;
+	flex-direction: row;
+}
+
+.subTitle {
+	color: black;
+	font-weight: 600;
+}
+
+.label {
+	color: black;
+	font-weight: 300;
+}
