@@ -1,36 +1,36 @@
 .navbar {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  background-color: hsl(0, 0%, 100%);
-  width: 100vw;
-  position: fixed;
-  top: 0;
-  left: 0;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  height: 8vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	background-color: hsl(0, 0%, 100%);
+	width: 100vw;
+	position: fixed;
+	top: 0;
+	left: 0;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	height: 8vh;
 }
 
 .right {
-  justify-content: flex-end;
-  display: flex;
-  align-items: center;
+	justify-content: flex-end;
+	display: flex;
+	align-items: center;
 }
 
 .left {
-  justify-content: flex-start;
-  display: flex;
-  align-items: center;
+	justify-content: flex-start;
+	display: flex;
+	align-items: center;
 }
 
 .btnchange {
-  font-family: 'Nunito Sans', sans-serif;
-  cursor: pointer;
-  width: 30px;
-  padding: 16px;
+	font-family: "Nunito Sans", sans-serif;
+	cursor: pointer;
+	width: 30px;
+	padding: 16px;
 }
 
 .title {
-  color: black;
-  padding: 16px;
+	color: black;
+	padding: 16px;
 }
