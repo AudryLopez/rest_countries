@@ -1,6 +1,6 @@
 import Image from "next/image"
 import styles from "./country.module.css"
-import Country from "../types/country"
+import Country from "../../types/country"
 
 export default function Countries(props: Country) {
   
