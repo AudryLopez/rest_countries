@@ -3,8 +3,8 @@ import styles from "./country.module.css"
 import Country from "../types/country"
 
 export default function Countries(props: Country) {
-	
-	return (
+  
+  return (
     <section className={styles.main}>
       <Image src={props.flags} alt={`flag of ${props.nativeName}`} />
       <div className={styles.country}>
