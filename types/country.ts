@@ -1,14 +1,14 @@
 interface Country {
   name: string;
-  topLevelDomain: string;
-  nativeName: string;
-  flags: string;
-  region: string;
-  borders: string;
-  population: number;
   capital: string;
-  languages: string;
-  subregion: string;
+  region: string;
+  flags: string;
+  population: number;
+  topLevelDomain?: string;
+  nativeName?: string;
+  borders?: string;
+  subregion?: string;
+  languages?: string;
 }
 
 export default Country;
