@@ -9,6 +9,7 @@ interface Country {
   borders?: string;
   subregion?: string;
   languages?: string;
+  currencies?: string;
 }
 
 export default Country;

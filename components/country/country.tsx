@@ -6,20 +6,20 @@ export default function Countries(props: Country) {
   
   return (
     <section className={styles.main}>
-      <Image src={props.flags} alt={`flag of ${props.nativeName}`} />
+      <Image src={props.flags} alt={`flag of ${props.name}`} />
       <div className={styles.country}>
-        <h1 className={styles.title}>{props.nativeName}</h1>
+        <h1 className={styles.title}>{props.name}</h1>
         <article>
-          <h1 className={styles.title}>Native Name:</h1>
-          <h1 className={styles.title}>Population:</h1>
-          <h1 className={styles.title}>Region:</h1>
-          <h1 className={styles.title}>Sub Region:</h1>
-          <h1 className={styles.title}>Capital:</h1>
-          <h1 className={styles.title}>Top Level Domain:</h1>
-          <h1 className={styles.title}>Currencies:</h1>
-          <h1 className={styles.title}>Languages:</h1>
+          <h1 className={styles.title}>Native Name: {props.nativeName}]</h1>
+          <h1 className={styles.title}>Population: {props.population}</h1>
+          <h1 className={styles.title}>Region: {props.region}</h1>
+          <h1 className={styles.title}>Sub Region: {props.subregion}</h1>
+          <h1 className={styles.title}>Capital: {props.capital}</h1>
+          <h1 className={styles.title}>Top Level Domain: {props.topLevelDomain}</h1>
+          <h1 className={styles.title}>Currencies: {props.currencies}</h1>
+          <h1 className={styles.title}>Languages: {props.languages}</h1>
         </article>
-        <h1 className={styles.title}>Border Contries:</h1>
+        <h1 className={styles.title}>Border Contries: {props.borders}</h1>
       </div>
     </section>
   );
