@@ -3,8 +3,19 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Header from "../components/header/header";
+import { country } from "./api/countries";
+import Country from "types/country";
+import Card from "components/card/card";
 
 const Home: NextPage = () => {
+  const mycountry = async () => {
+    const response = await country("peru");
+    const res = response.map((data: any, index: number) => {
+       <Card key={index} country={data} />;
+    });
+    return res;
+  }
+
   return (
     <div className={styles.container}>
       <Head>
@@ -14,13 +25,11 @@ const Home: NextPage = () => {
       </Head>
 
       <Header />
+      <main className={styles.main}>{[mycountry].map((data)=>{
+        return data
+      })}</main>
 
-      <main className={styles.main}>
-
-      </main>
-
-      <footer className={styles.footer}>
-      </footer>
+      <footer className={styles.footer}></footer>
     </div>
   );
 };

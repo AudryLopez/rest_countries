@@ -2,8 +2,8 @@ import Image from 'next/image'
 import styles from './card.module.css'
 import Country from '../../types/country';
 
-export default function Card(props: Country) {
-  const { flags, name, population, region, capital }  =  props;
+export default function Card(Country: any) {
+  const { flags, name, population, region, capital } = Country;
 
   return (
     <div className={styles.card}>

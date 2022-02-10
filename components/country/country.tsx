@@ -1,9 +1,9 @@
 import Image from "next/image"
-import styles from "./country.module.css"
+import styles from "../../styles/globals.module.css"
 import Country from "../../types/country"
 
-export default function Countries(props: Country) {
-  
+export default function Countries(props: any) {
+
   return (
     <section className={styles.main}>
       <Image src={props.flags} alt={`flag of ${props.name}`} />
