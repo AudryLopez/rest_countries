@@ -1,4 +1,4 @@
-interface Country {
+type Country =  {
   name: string;
   capital: string;
   region: string;
