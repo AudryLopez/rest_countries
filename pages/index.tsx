@@ -17,7 +17,16 @@ const Home: NextPage = () => {
 
       <Header />
       <main className={styles.main}>
-        <Card />
+        <section className={styles.countriesContainer}>
+          <Card country="Argentina" />
+          <Card country="spain" />
+          <Card country="usa" />
+          <Card country="Germany" />
+          <Card country="italy" />
+          <Card country="peru" />
+          <Card country="peru" />
+          <Card country="peru" />
+        </section>
       </main>
 
       <footer className={styles.footer}></footer>
