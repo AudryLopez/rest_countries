@@ -20,12 +20,12 @@ const Home: NextPage = () => {
         <section className={styles.countriesContainer}>
           <Card country="Argentina" />
           <Card country="spain" />
-          <Card country="usa" />
+          <Card country="mexico" />
           <Card country="Germany" />
-          <Card country="italy" />
-          <Card country="peru" />
-          <Card country="peru" />
-          <Card country="peru" />
+          <Card country="Kenya" />
+          <Card country="south korea" />
+          <Card country="Libya" />
+          <Card country="Nepal" />
         </section>
       </main>
 
