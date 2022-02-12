@@ -24,7 +24,7 @@ function Card(prop: { country: string }) {
   
   useEffect(() => {
     getCountry(prop.country);
-  }, []);
+  }, [prop.country]);
 
   return countryName ? (
     countryName.map((data: any, id: number) => {
