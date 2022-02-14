@@ -28,8 +28,6 @@ const Home: NextPage = () => {
           <Card country="Nepal" />
         </section>
       </main>
-
-      <footer className={styles.footer}></footer>
     </div>
   );
 };
