@@ -6,7 +6,6 @@ import React from "react";
 
 function Card(prop: { country: string }) {
   const [countryName, setCountry] = useState<any>();
-  const [loading, setloading] = useState(false);
 
   const getCountry = async (countries: string) => {
     const response = await fetch(
