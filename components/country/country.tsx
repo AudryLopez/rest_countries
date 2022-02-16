@@ -38,18 +38,18 @@ export default function Countries(props: { country: string }) {
     <section key={index} className={styles.main}>
       <Image src={data.flags.svg} alt={`flag of ${data.name}`} />
       <div className={styles.country}>
-        <h1 className={styles.title}>{data.name}</h1>
+        <h2 className={styles.title}>{data.name}</h2>
         <article>
-          <h1 className={styles.title}>Native Name: {data.nativeName}]</h1>
-          <h1 className={styles.title}>Population: {data.population}</h1>
-          <h1 className={styles.title}>Region: {data.region}</h1>
-          <h1 className={styles.title}>Sub Region: {data.subregion}</h1>
-          <h1 className={styles.title}>Capital: {data.capital}</h1>
-          <h1 className={styles.title}>Top Level Domain: {data.topLevelDomain}</h1>
-          <h1 className={styles.title}>Currencies: {data.currencies}</h1>
-          <h1 className={styles.title}>Languages: {data.languages}</h1>
+          <h3 className={styles.title}>Native Name: {data.nativeName}</h3>
+          <h3 className={styles.title}>Population: {data.population}</h3>
+          <h3 className={styles.title}>Region: {data.region}</h3>
+          <h3 className={styles.title}>Sub Region: {data.subregion}</h3>
+          <h3 className={styles.title}>Capital: {data.capital}</h3>
+          <h3 className={styles.title}>Top Level Domain: {data.topLevelDomain}</h3>
+          <h3 className={styles.title}>Currencies: {data.currencies}</h3>
+          <h3 className={styles.title}>Languages: {data.languages}</h3>
         </article>
-        <h1 className={styles.title}>Border Contries: {data.borders}</h1>
+        <h3 className={styles.title}>Border Contries: {data.borders}</h3>
       </div>
     </section>
     )}):
