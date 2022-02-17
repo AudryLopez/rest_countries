@@ -21,7 +21,7 @@ export default function Countries(props: { country: string }) {
       topLevelDomain: data.topLevelDomain,
       currencies: data.currencies,
       languages: data.languages,
-      borders: data.borders,
+      borders: data.borders
     }));
     setCountry(res);
     setdata(true)

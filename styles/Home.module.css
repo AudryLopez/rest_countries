@@ -119,15 +119,30 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  width: 100%;
   justify-content: space-evenly;
   gap: 35px 65px;
 }
 
+.selectContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
 .input {
+  justify-content: flex-start;
+  display: flex;
   width: 280px;
   height: 50px;
   border-radius: 5px;
   border: 0px;
   padding: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  font-family: "Nunito Sans";
+}
+
+.select {
+  justify-content: flex-end;
+  display: flex;
 }
