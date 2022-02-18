@@ -24,7 +24,12 @@ const Home: NextPage = () => {
               placeholder="Find your country.."
               className={styles.input}
             />
-            <select></select>
+            <select className={styles.select}>
+              <option value="volvo">Volvo</option>
+              <option value="saab">Saab</option>
+              <option value="fiat">Fiat</option>
+              <option value="audi">Audi</option>
+            </select>
           </nav>
           <Card country="Argentina" />
           <Card country="france" />

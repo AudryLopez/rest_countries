@@ -37,12 +37,15 @@ function Card(prop: { country: string }) {
             layout="responsive"
             alt="flag"
           />
-          <div className={styles.cardContainer}>
-            <h1 className={styles.title}>{data.name.common}</h1>
-            <h3 className={styles.subTitle}>Population: {data.population}</h3>
-            <h3 className={styles.subTitle}>Region: {data.region}</h3>
-            <h3 className={styles.subTitle}>Capital: {data.capital}</h3>
-          </div>
+          <section className={styles.cardContainer}>
+            <h2>{data.name.common}</h2>
+            <strong>
+              Population: <p>{data.population}</p>
+            </strong>
+
+            <h3>Region: {data.region}</h3>
+            <h3>Capital: {data.capital}</h3>
+          </section>
         </div>
       );
     })

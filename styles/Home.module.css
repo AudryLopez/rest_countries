@@ -145,4 +145,6 @@
 .select {
   justify-content: flex-end;
   display: flex;
+  width: 180px;
+  border-radius: 5px;
 }
