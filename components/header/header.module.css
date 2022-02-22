@@ -16,12 +16,14 @@
   justify-content: flex-end;
   display: flex;
   align-items: center;
+  padding-right: 12rem;
 }
 
 .left {
   justify-content: flex-start;
   display: flex;
   align-items: center;
+  padding-left: 12rem;
 }
 
 .btnchange {

@@ -4,7 +4,8 @@
 
 .main {
   min-height: 100vh;
-  padding: 9rem 6rem;
+  max-width: 100vw;
+  padding: 9rem 11rem;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -121,7 +122,8 @@
   flex-wrap: wrap;
   width: 100%;
   justify-content: space-evenly;
-  gap: 35px 65px;
+  gap: 30px 35px;
+  flex-grow: 1;
 }
 
 .selectContainer {
@@ -147,4 +149,7 @@
   display: flex;
   width: 180px;
   border-radius: 5px;
+  padding: 10px ;
+  border: 0px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
