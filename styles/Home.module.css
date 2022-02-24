@@ -111,21 +111,22 @@
 
 @media (max-width: 700px) {
   .main {
-    min-width: 100vw;
     flex-direction: column;
-    padding: 0;
-  }
-  .countriesContainer{
-    width: 100%;
-    flex-direction: column;
+    padding: 90px 0;
   }
   .selectContainer{
     width: 100%;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 20px;
   }
+  .input{
+    max-width: 280px;
+    max-height: 37px;
+  }
   .select{
-    padding: 0;
+    min-width: 280px;
   }
 }
 
