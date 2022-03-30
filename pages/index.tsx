@@ -1,27 +1,17 @@
 import type { NextPage } from "next";
+import { GetStaticProps } from "next";
+import { getCountries } from "api";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Header from "../components/header/header";
 import Card from "components/card/card";
-import { useState, useEffect } from "react";
+import { Country } from "types";
 
-export default function Home() {
-  const [search, setSeach] = useState<string|null>(null);
-  const [load, setLoad] = useState(false);
-  const [country, setCountry] = useState<string|null>(null);
+interface prop {
+  country: Country[]
+}
 
-  useEffect(() => {
-    const data = async (country: any) => {
-      setLoad(true);
-      const response = await fetch(
-        `https://restcountries.com/v3.1/name/${country}`
-      ).then((res) => res.json());
-      if(!response) throw Error("not found")
-      setCountry(response);
-    };
-    if (search) data(search);
-    setLoad(true);
-  });
+export default function Home<prop>({ countries }) {
 
   return (
     <div className={styles.container}>
@@ -87,3 +77,15 @@ export default function Home() {
     </div>
   );
 };
+
+export const getStaticProps: GetStaticProps = async (ctx) => {
+  const { data } = await getCountries.get("/all");
+  const countries: Country[] = data.map((countries: any, index: number)=>({
+    ...countries,
+    id: index + 1
+  }))
+  return {
+    props: countries
+  }
+};
+
