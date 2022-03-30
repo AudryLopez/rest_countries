@@ -5,7 +5,7 @@ import Header from "../components/header/header";
 import Card from "components/card/card";
 import { useState, useEffect } from "react";
 
-const Home: NextPage = () => {
+export default function Home() {
   const [search, setSeach] = useState<string|null>(null);
   const [load, setLoad] = useState(false);
   const [country, setCountry] = useState<string|null>(null);
@@ -87,5 +87,3 @@ const Home: NextPage = () => {
     </div>
   );
 };
-
-export default Home;
