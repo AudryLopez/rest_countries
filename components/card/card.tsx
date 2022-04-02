@@ -1,15 +1,14 @@
 import { FC } from 'react';
 import Image from 'next/image'
 import styles from './card.module.css'
-import { Country } from 'types';
+import { CountryResponse } from "types";
 import React from "react";
 
 interface prop {
-  country: Country
+  country: CountryResponse;
 }
 
 export const Card: FC<prop> = ({ country }) => {
-    
   return (
     <div className={styles.card}>
       <Image
@@ -31,9 +30,6 @@ export const Card: FC<prop> = ({ country }) => {
       </section>
     </div>
   );
-}
-
-
-
+};
 
 export default Card;

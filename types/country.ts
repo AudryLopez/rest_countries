@@ -1,9 +1,9 @@
 export interface Country {
-  id: number,
-  name: string;
+  id: number;
+  name: name;
   capital: string;
   region: string;
-  flags: string;
+  flags: img;
   population: number;
   topLevelDomain?: string;
   nativeName?: string;
@@ -13,6 +13,22 @@ export interface Country {
   currencies?: string;
 }
 
-export interface countryResponse {
+export interface img {
+  svg: string;
+  png: string;
+}
 
+export interface name {
+  common: string;
+  official: string;
+  nativeName: nativeName;
+}
+
+export interface nativeName {
+  spa: translation;
+}
+
+export interface translation {
+  official: string;
+  common: string;
 }

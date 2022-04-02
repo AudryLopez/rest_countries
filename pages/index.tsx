@@ -6,13 +6,14 @@ import styles from "../styles/Home.module.css";
 import Header from "../components/header/header";
 import Card from "components/card/card";
 import { Country } from "types";
+import { CountryResponse } from "types";
 
-interface prop {
-  country: Country[]
+interface Props {
+  countries: CountryResponse[];
 }
 
-export default function Home<prop>({ countries }) {
-
+const HomePage: NextPage<Props> = ({ countries }) => {
+  console.log(countries)
   return (
     <div className={styles.container}>
       <Head>
@@ -29,49 +30,22 @@ export default function Home<prop>({ countries }) {
               type="text"
               placeholder="Find your country.."
               className={styles.input}
-              onChange={(e)=>{setSeach(e.target.value)}}
             />
             <select className={styles.select} placeholder="Find your country..">
-              <option
-                value="Africa"
-                onClick={() => {
-                }}
-              >
-                Africa
+              <option value="Africa">Africa</option>
+              <option value="America">America</option>
+              <option value="Asia">Asia</option>
+              <option value="Europa">
+                Europa
               </option>
-              <option
-                value="America"
-                onClick={() => {
-                }}
-              >
-                America
+              <option value="Oceania" >
+                Oceania
               </option>
-              <option
-                value="Asia"
-                onClick={() => {
-                }}
-              >
-                Asia
-              </option>
-              <option value="Europa"onClick={()=>{}}>Europa</option>
-              <option value="Oceania"onClick={()=>{}}>Oceania</option>
             </select>
           </nav>
-          {country ? [country].map((data: any, index: number) => {
-            console.log(data.name.common);
-
-          }):
-          <>
-            <Card country="Argentina" />
-            <Card country="france" />
-            <Card country="mexico" />
-            <Card country="Germany" />
-            <Card country="Kenya" />
-            <Card country="yemen" />
-            <Card country="Libya" />
-            <Card country="Nepal" />
-          </>
-          }
+          {countries.map((country, id: number)=>{
+             return <Card key={id} country={country} />
+          })}
         </section>
       </main>
     </div>
@@ -79,13 +53,15 @@ export default function Home<prop>({ countries }) {
 };
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
-  const { data } = await getCountries.get("/all");
-  const countries: Country[] = data.map((countries: any, index: number)=>({
-    ...countries,
-    id: index + 1
-  }))
+  const  { data }  = await getCountries.get<CountryResponse[]>("/all");
+  const countries: CountryResponse[] = data.map((country) => ({
+    ...country
+  }));
   return {
-    props: countries
+    props: {
+      countries,
+    },
   }
 };
 
+export default HomePage;
