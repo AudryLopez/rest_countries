@@ -54,14 +54,12 @@ const HomePage: NextPage<Props> = ({ countries }) => {
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
   const  { data }  = await getCountries.get<CountryResponse[]>("/all");
-  const countries: CountryResponse[] = data.map((country) => ({
-    ...country
-  }));
+  
   return {
     props: {
-      countries,
+      data,
     },
-  }
+  };
 };
 
 export default HomePage;
