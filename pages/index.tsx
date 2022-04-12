@@ -13,7 +13,7 @@ interface Props {
 }
 
 const HomePage: NextPage<Props> = ({ countries }) => {
-  console.log(countries)
+  
   return (
     <div className={styles.container}>
       <Head>
