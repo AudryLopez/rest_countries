@@ -1,7 +1,6 @@
 import styles from './header.module.css'
 import Image from 'next/image'
 import moon from "/components/img/moon-solid.svg";
-import themes from 'types/themes';
 import { Head } from 'next/document';
 
 export default function Header(){

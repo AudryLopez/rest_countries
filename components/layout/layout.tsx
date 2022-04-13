@@ -5,7 +5,7 @@ import styles from "../styles/Home.module.css";
 interface prop {
   children: object
 }
-export const main: FC<prop> = ({ children }) => {
+export const Layout: FC<prop> = ({ children }) => {
   
   return (
     <div className={styles.container}>

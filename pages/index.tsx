@@ -7,13 +7,14 @@ import Header from "../components/header/header";
 import Card from "components/card/card";
 import { Country } from "types";
 import { CountryResponse } from "types";
+import Main
 
 interface Props {
   countries: CountryResponse[];
 }
 
 const HomePage: NextPage<Props> = ({ countries }) => {
-  
+
   return (
     <div className={styles.container}>
       <Head>
