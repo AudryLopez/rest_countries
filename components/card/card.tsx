@@ -1,18 +1,20 @@
 import { FC } from 'react';
 import Image from 'next/image'
 import styles from './card.module.css'
-import { CountryResponse } from "types";
+import { SmallCountry } from "types";
 import React from "react";
 
 interface prop {
-  country: CountryResponse;
+  country: SmallCountry;
 }
 
 export const Card: FC<prop> = ({ country }) => {
+console.log({country})
+
   return (
     <div className={styles.card}>
       <Image
-        src={`${country.flags}.svg`}
+        src={country.flags.svg}
         className={styles.imagen}
         width="100%"
         height="60%"

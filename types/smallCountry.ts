@@ -1,3 +1,21 @@
+export interface CountryListResponse {
+  results: SmallCountry[];
+}
+
+export interface SmallCountry {
+  name: Name;
+  url: string;
+  id: number;
+  img: string;
+  capital: string[];
+  borders: string[];
+  languages: Languages;
+  flags: coatOfArms;
+  population: number;
+  region: string;
+  area: number;
+}
+
 export interface CountryResponse {
   id?: number;
   name: Name;
@@ -107,3 +125,4 @@ export interface PostalCode {
   format: string;
   regex: string;
 }
+
