@@ -10,7 +10,6 @@ interface Props {
 }
 
 const HomePage: NextPage<Props> = ({ countries }) => {
-  console.log(countries)
 
   return (
     <Layout>
@@ -30,7 +29,7 @@ const HomePage: NextPage<Props> = ({ countries }) => {
           </select>
         </nav>
         {countries.map((country, id: number) => {
-          return <Card key={id} country={country} />;
+          if (id < 8) return <Card key={id} country={country} /> 
         })}
         
       </section>
@@ -44,8 +43,6 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
     ...country,
     id: index + 1,
   }));
-
-  console.log(countries)
 
   return {
     props: {

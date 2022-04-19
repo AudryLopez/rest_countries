@@ -9,7 +9,6 @@ interface prop {
 }
 
 export const Card: FC<prop> = ({ country }) => {
-console.log({country})
 
   return (
     <div className={styles.card}>
