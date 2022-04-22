@@ -14,6 +14,10 @@ export interface SmallCountry {
   population: number;
   region: string;
   area: number;
+  topLevelDomain?: string;
+  nativeName?: string;
+  subregion?: string;
+  currencies?: string;
 }
 
 export interface CountryResponse {

@@ -1,17 +1,26 @@
 import { FC } from 'react';
+import { useRouter } from "next/router";
 import Image from 'next/image'
 import styles from './card.module.css'
 import { SmallCountry } from "types";
-import React from "react";
+
+
 
 interface prop {
   country: SmallCountry;
 }
 
 export const Card: FC<prop> = ({ country }) => {
+  const router = useRouter();
+
+  const pushButton = () =>{
+    router.push(`/country/${country.name.common as string}`)
+  }
+
+  console.log(country.name.common as string);
 
   return (
-    <div className={styles.card}>
+    <div className={styles.card} onClick={pushButton}>
       <Image
         src={country.flags.svg}
         className={styles.imagen}
