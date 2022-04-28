@@ -12,8 +12,7 @@ interface prop {
 
 export const Card: FC<prop> = ({ country }) => {
   const router = useRouter();
-
-  console.log(typeof country.name.common);
+  
   const pushButton = () =>{
     router.push(`/country/${country.name.common}`)
   }

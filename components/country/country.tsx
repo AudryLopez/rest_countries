@@ -8,11 +8,18 @@ interface prop {
 
 const  Countries: FC<prop> = ({ country }) => {
 
+  console.log(country)
+
     return (
       <section className={styles.main}>
-        <Image src={country.flags.svg} alt={`flag of ${country.name}`} />
+        <Image
+          src={country.flags.svg || country.flags.png}
+          alt={`flag of ${country.name.common}`}
+          width={100}
+          height={90}
+        />
         <div className={styles.country}>
-          <h2 className={styles.title}>{country.name}</h2>
+          <h2 className={styles.title}>{country.name.common}</h2>
           <article>
             <h3 className={styles.title}>Native Name: {country.nativeName}</h3>
             <h3 className={styles.title}>Population: {country.population}</h3>
