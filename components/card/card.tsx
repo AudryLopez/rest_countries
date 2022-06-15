@@ -14,7 +14,7 @@ export const Card: FC<prop> = ({ country }) => {
   const router = useRouter();
   
   const pushButton = () =>{
-    router.push(`/country/${country.name.common}`)
+    router.push(`/country/${country.name.common.toLocaleLowerCase()}`)
   }
 
   return (

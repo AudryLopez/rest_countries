@@ -4,9 +4,10 @@ import { getCountries } from "api";
 import styles from "../styles/Home.module.css";
 import Card from "components/card/card";
 import { Layout } from '../components/layout/index';
-import { SmallCountry } from "types";
+import { country } from '../types/smallCountry';
+
 interface Props {
-  countries: SmallCountry[];
+  countries: country[];
 }
 
 const HomePage: NextPage<Props> = ({ countries }) => {
@@ -29,9 +30,8 @@ const HomePage: NextPage<Props> = ({ countries }) => {
           </select>
         </nav>
         {countries.map((country, id: number) => {
-          if (id < 8) return <Card key={id} country={country} /> 
+          return <Card key={id} country={country} /> 
         })}
-        
       </section>
     </Layout>
   );
@@ -39,7 +39,7 @@ const HomePage: NextPage<Props> = ({ countries }) => {
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
   const { data } = await getCountries.get("/all");
-  const countries: SmallCountry[] = data.map((country: SmallCountry, index: number) => ({
+  const countries: country[] = data.map((country: country, index: number) => ({
     ...country,
     id: index + 1,
   }));

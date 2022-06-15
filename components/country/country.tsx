@@ -2,13 +2,12 @@ import Image from "next/image"
 import styles from "./country.module.css"
 import { FC } from "react";
 import { SmallCountry } from "types";
+import { Country, name } from '../../types/country';
 interface prop {
   country: SmallCountry;
 }
 
-const  Countries: FC<prop> = ({ country }) => {
-
-  console.log(country)
+const  Countries: FC = ( country: any ) => {
 
     return (
       <section className={styles.main}>

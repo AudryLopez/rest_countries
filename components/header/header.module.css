@@ -1,41 +1,51 @@
+.header {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: hsl(0, 0%, 100%);
+  min-width: 100vw;
+  max-height: 8vh;
+  min-height: 8vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-self: center;
+  z-index: 10;
+  position: fixed;
+}
+
 .navbar {
+  margin-inline: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: hsl(0, 0%, 100%);
-  width: 100vw;
-  position: fixed;
-  top: 0;
-  left: 0;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 100%;
   height: 8vh;
   z-index: 10;
+  padding: 0 5rem;
 }
 
 .right {
   justify-content: flex-end;
   display: flex;
+  justify-content: flex-end;
   align-items: center;
-  padding-right: 9rem;
 }
 
 .left {
   justify-content: flex-start;
   display: flex;
+  justify-content: flex-start;
   align-items: center;
-  padding-left: 9rem;
 }
 
 .btnchange {
   font-family: "Nunito Sans", sans-serif;
   cursor: pointer;
   width: 30px;
-  margin-left: 15px;
 }
 
 .title {
   color: black;
-  padding: 16px;
+  cursor: pointer;
 }
 
 @media (max-width: 700px) {
@@ -48,5 +58,15 @@
   }
   .left{
     padding: 10px;
+  }
+  .navbar {
+    margin-inline: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 8vh;
+    z-index: 10;
+    padding: 0;
   }
 }
