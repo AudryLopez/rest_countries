@@ -1,10 +1,9 @@
 import Image from "next/image"
 import styles from "./country.module.css"
 import { FC } from "react";
-import { SmallCountry } from "types";
-import { Country, name } from '../../types/country';
+import { country } from "types";
 interface prop {
-  country: SmallCountry;
+  country: country;
 }
 
 const  Countries: FC = ( country: any ) => {

@@ -18,7 +18,9 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang="es">
-        <Head></Head>
+        <Head>
+          <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,600;1,800&family=Public+Sans:wght@300;400;700&family=Raleway:wght@300&display=swap" rel="stylesheet"></link>
+        </Head>
         <body>
           <Main />
           <NextScript />

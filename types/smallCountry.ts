@@ -1,7 +1,6 @@
-import { nativeName } from './country';
 export interface country {
 	id: number;
-	name: name;
+	name: string;
 	topLevelDomain: string[];
 	alpha2Code: string;
 	alpha3Code: string;
@@ -31,7 +30,11 @@ export interface country {
 interface name {
 	common: string;
 	official: string;
-  nativeName: string;
+  nativeName: string[];
+}
+
+interface nativeName{
+
 }
 export interface Currency {
 	code: string;

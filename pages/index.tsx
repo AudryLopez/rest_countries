@@ -11,14 +11,14 @@ interface Props {
 }
 
 const HomePage: NextPage<Props> = ({ countries }) => {
-
+  
   return (
     <Layout>
       <section className={styles.countriesContainer}>
         <nav className={styles.selectContainer}>
           <input
             type="text"
-            placeholder="Find your country.."
+            placeholder="search for a country.."
             className={styles.input}
           />
           <select className={styles.select} placeholder="Find your country..">
